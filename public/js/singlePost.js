@@ -8,7 +8,7 @@ const upvoted = () => {
             document.getElementById("upvoteValue").innerHTML = data.upvote;
         }
     };
-    req.open("GET", `http://localhost:3000/blog/vote/${blogId}/1`, true);
+    req.open("GET", `https://aot-blogapp.onrender.com/blog/vote/${blogId}/1`, true);
     req.send();
 }
 

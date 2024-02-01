@@ -37,7 +37,7 @@ function searchHandler() {
             // console.log(selectList);
         }
     }
-    req.open("GET", "https://localhost:3000/searchPost?value=" + text, true);
+    req.open("GET", "https://aot-blogapp.onrender.com/searchPost?value=" + text, true);
     req.send();
 }
 
