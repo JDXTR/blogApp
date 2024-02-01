@@ -1,0 +1,25 @@
+body{
+    background-color: #4a949e;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+}
+.navbar{
+    background-color: #22464b!important;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+}
+
+.nav-left{
+    margin: 0px 20px;
+}
+
+.nav-link{
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+#mySelect{
+    position: absolute;
+    top: 60px;
+    height: 35px;
+    width: 210px;
+    border-radius: 5px;
+}

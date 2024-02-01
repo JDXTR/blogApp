@@ -1,0 +1,14 @@
+body {
+    background: #a0a0a0;
+}
+span{
+    font-size: 7rem;
+    font-weight: 200;
+}
+.page-wrap {
+    min-height: 100vh;
+}
+
+a{
+    font-style: none;
+}

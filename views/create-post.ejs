@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+  <head>
+    <link rel="stylesheet" href="/create-post.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h3>Create</h3>
+      <form action="/create-post" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control form-child" name="title" id="title" placeholder="Title">
+          <select class="form-control form-child" name="type">
+            <option>Blog</option>
+            <option>Interview</option>
+            <option>Notice</option>
+          </select>
+          <textarea class="form-control form-child" name="content" id="content" rows="3"
+            placeholder="Content"></textarea>
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <button type="submit" id="submit" class="btn btn-success btn-custom">Create</button>
+        </div>
+      </form>
+    </div>
+
+  </body>
+
+  </html>

@@ -1,0 +1,35 @@
+h3{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(197, 245, 227);
+    margin-top: 10px;
+}
+form{
+    margin: 0% 10%;
+    padding: 10px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-child{
+    margin: 20px;
+    padding: 5px 10px;
+    opacity: 70%;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-custom{
+    width: 60%;
+}
+
+textarea#content{
+    height: 560px;
+    resize: none;
+}
+

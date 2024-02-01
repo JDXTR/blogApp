@@ -1,0 +1,17 @@
+.container {
+    margin-top: 40px;
+}
+
+.card{
+    opacity: 80%;
+}
+
+.more{
+    text-decoration: none;
+    color: rgb(64, 66, 66);
+    margin-left: 75%;
+}
+
+.card{
+    margin: 90px 0px;
+}

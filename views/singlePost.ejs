@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+    <head>
+        <link href="/singlePost.css" rel="stylesheet" />
+        <title><%= data.title %></title>
+        <script src="/js/singlePost.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg blog">
+                    <div class="blog-title">
+                        <h2><%= data.title %></h2>
+                        <h3><i class="fa-solid fa-star"></i> <span id="upvoteValue"> <%= data.upvoteLists.length %> </span></h3>
+                    </div>
+                    <p id="blogId" style="visibility: hidden; display: none;"><%= data._id %></p>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="upvoted()"><i class="fa-solid fa-arrow-up"></i></button>
+                    <!-- <button onclick="downvoted()">Downvote</button> -->
+                    <p class="blog-content">
+                        <%= data.content %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>

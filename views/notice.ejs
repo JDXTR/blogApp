@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+    <head>
+        <link rel="stylesheet" href="/notice.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <% for(let i in notices){ %>
+                <div class="card text-center bg-light border-success mb-3">
+                    <div class="card-body">
+                        <h3 class="card-title"><%= notices[i].title %></h3>
+                        <p class="card-text"><%= notices[i].content.substring(0, 100) + " ..." %> </p>
+                        <a href="/singlePost/<%= notices[i]._id %>"><button class="btn btn-md btn-outline-info more">Read More</button></a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <%= notices[i].date.toLocaleDateString() %>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </body>
+
+    </html>

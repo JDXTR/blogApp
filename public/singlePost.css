@@ -1,0 +1,30 @@
+.container{
+    padding: 40px 0px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 20px 20px 0px 0px;
+    min-height: 100vh;
+    margin-top: 20px;
+    opacity: 90%;
+}
+
+.btn{
+    width: 100%;
+}
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 20px;
+}
+
+.blog-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-title,
+.blog-content{
+    margin: 20px 0px;
+}

@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+    <head>
+        <link rel="stylesheet" href="/blog.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7">
+                    <div class="card p-3 py-4">
+                        <div class="text-center">
+                            <img src="/img/profile.png" width="100" class="rounded-circle">
+                        </div>
+                        <div class="text-center mt-3">
+                            <span class="bg-secondary p-1 px-4 rounded text-white"> <%= username %> </span>
+                            <h5 class="mt-2 mb-0"> <%= user.name %> </h5>
+                            <span> <%= user.email %> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <% for(let i in posts){ %>
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                        <div class="card bg-light">
+                            <div>
+                                <a href="#" class="btn btn-light btn-sm">
+                                    <%= posts[i].type %>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <%= posts[i].title %>
+                                </h4>
+                                <p class="card-text text-muted">
+                                    <%= posts[i].content.substring(0, 100) + " ..." %>
+                                </p>
+                                <a href="/singlePost/<%= posts[i]._id %>"><button class="btn btn-md btn-outline-info">Read More</button></a>
+                                <a href="/deletePost/<%= posts[i]._id %>"><button class="btn btn-md btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button></a>
+                            </div>
+                            <div
+                                class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+                                <div class="views">
+                                    <%= posts[i].date.toLocaleDateString() %>
+                                </div>
+                                <div class="stats">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <%= posts[i].upvoteLists.length %>
+                                        <!-- <i class="fa-solid fa-heart-crack"></i> 12 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </body>
+
+    </html>
